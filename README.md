@@ -22,6 +22,15 @@ Maybe it would be best to mark which changes have some from where or maybe best 
 Now need to check out going back to a previous commit or branch.
 =======================
 
+//On laptop, newversion has been merged with master, master hasnt changed at all. 
+18/11.
+1. alter the master and commit it. 
+2. merge master with new version
+3. maybe create new branches 
+4. merge new branches after alteringthem 
+
+
+
 
 not sure the reasoning behind the number below,
 appears for both merges. Do i need to keep it?
