@@ -1,5 +1,12 @@
-This is the latest and freshest branch created from the master soon to be merged with the newversion 
-1. alter the master and commit it.
-2. merge master with new version
-3. maybe create new branches
-4. merge new branches after altering them
+#JamesMoloney LinkedDataProject
+
+
+###Datasets
+
+http://www.cso.ie/px/pxeirestat/Statire/SelectVarVal/Define.asp?maintable=CD101&PLanguage=0
+
+http://www.cso.ie/px/pxeirestat/Statire/SelectVarVal/saveselections.asp
+
+###Plan
+Use both the sets to query how the sexes are paid and if they move
+towards where there ae higher paying jobs are.
