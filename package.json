@@ -1,0 +1,24 @@
+{
+  "name": "LinkDataProject",
+  "version": "1.0.0",
+  "description": "https://github.com/MrMallet/LinkedDataProject.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrMallet/LinkedDataProject.git"
+  },
+  "author": "James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmit-linked-data/imdb-api/issues"
+  },
+  "homepage": "https://github.com/MrMallet/LinkedDataProject#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "sqlite3": "^3.1.1"
+  }
+}
