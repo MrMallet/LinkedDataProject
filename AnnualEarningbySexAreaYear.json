@@ -1,0 +1,434 @@
+[
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":39487,
+    "Y2008":43343,
+    "Y2009":40450
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":3115,
+    "Y2008":3696,
+    "Y2009":2543
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":42602,
+    "Y2008":47040,
+    "Y2009":42993
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":36075,
+    "Y2008":38769,
+    "Y2009":37526
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":2220,
+    "Y2008":2459,
+    "Y2009":1765
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":38295,
+    "Y2008":41228,
+    "Y2009":39291
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":33773,
+    "Y2008":35569,
+    "Y2009":36533
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1630,
+    "Y2008":1623,
+    "Y2009":1545
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":35403,
+    "Y2008":37192,
+    "Y2009":38078
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":32803,
+    "Y2008":35344,
+    "Y2009":35000
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1072,
+    "Y2008":1399,
+    "Y2009":1477
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":33875,
+    "Y2008":36744,
+    "Y2009":36477
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":29956,
+    "Y2008":33021,
+    "Y2009":32492
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1478,
+    "Y2008":1199,
+    "Y2009":970
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":31434,
+    "Y2008":34220,
+    "Y2009":33461
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"State",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":35607,
+    "Y2008":38428,
+    "Y2009":38337
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"State",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":2120,
+    "Y2008":2347,
+    "Y2009":2042
+  },
+  {
+    "Sex":"Both sexes",
+    "Area of Residence":"State",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":37726,
+    "Y2008":40775,
+    "Y2009":40379
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":44682,
+    "Y2008":50207,
+    "Y2009":46966
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":4209,
+    "Y2008":5166,
+    "Y2009":3602
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":48891,
+    "Y2008":55373,
+    "Y2009":50568
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":40904,
+    "Y2008":45591,
+    "Y2009":43865
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":2916,
+    "Y2008":3434,
+    "Y2009":2422
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":43820,
+    "Y2008":49025,
+    "Y2009":46287
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":38311,
+    "Y2008":41028,
+    "Y2009":41405
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":2127,
+    "Y2008":2258,
+    "Y2009":1887
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":40438,
+    "Y2008":43286,
+    "Y2009":43292
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":36745,
+    "Y2008":40564,
+    "Y2009":39578
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1592,
+    "Y2008":2052,
+    "Y2009":1977
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":38337,
+    "Y2008":42615,
+    "Y2009":41555
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":32543,
+    "Y2008":35365,
+    "Y2009":36099
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1957,
+    "Y2008":1579,
+    "Y2009":1258
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":34501,
+    "Y2008":36944,
+    "Y2009":37357
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"State",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":40269,
+    "Y2008":44232,
+    "Y2009":44329
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"State",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":2830,
+    "Y2008":3252,
+    "Y2009":2850
+  },
+  {
+    "Sex":"Male",
+    "Area of Residence":"State",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":43099,
+    "Y2008":47484,
+    "Y2009":47178
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":33639,
+    "Y2008":36604,
+    "Y2009":34219
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1883,
+    "Y2008":2254,
+    "Y2009":1529
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Dublin",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":35521,
+    "Y2008":38858,
+    "Y2009":35748
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":30020,
+    "Y2008":31528,
+    "Y2009":31316
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1347,
+    "Y2008":1423,
+    "Y2009":1121
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Rest of Leinster",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":31367,
+    "Y2008":32951,
+    "Y2009":32437
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":28212,
+    "Y2008":29789,
+    "Y2009":32216
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1020,
+    "Y2008":951,
+    "Y2009":1242
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Munster",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":29232,
+    "Y2008":30740,
+    "Y2009":33458
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":28786,
+    "Y2008":30466,
+    "Y2009":31207
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":543,
+    "Y2008":789,
+    "Y2009":1063
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Connacht",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":29329,
+    "Y2008":31255,
+    "Y2009":32270
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":26864,
+    "Y2008":30438,
+    "Y2009":29202
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":906,
+    "Y2008":780,
+    "Y2009":707
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"Ulster (pt)",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":27769,
+    "Y2008":31218,
+    "Y2009":29909
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"State",
+    "statistical indicator":"Basic Annual Earnings (Euro)",
+    "Y2007":30118,
+    "Y2008":32433,
+    "Y2009":32655
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"State",
+    "statistical indicator":"Annual Bonuses and Benefit in Kind (Euro)",
+    "Y2007":1284,
+    "Y2008":1411,
+    "Y2009":1277
+  },
+  {
+    "Sex":"Female",
+    "Area of Residence":"State",
+    "statistical indicator":"Total Annual Earnings (Euro)",
+    "Y2007":31403,
+    "Y2008":33845,
+    "Y2009":33932
+  }
+]

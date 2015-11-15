@@ -4,8 +4,8 @@ var fs = require('fs');
 var express = require('express');
 
 // Read in the text file and parse it for JSON.
-var data = JSON.parse(fs.readFileSync('ratings.json','utf8'));
-var data2 = JSON.parse(fs.readFileSync('ratings.json','utf8'));
+var data = JSON.parse(fs.readFileSync('ChangeInAreaPopulation.json','utf8'));
+var data2 = JSON.parse(fs.readFileSync('AnnualEarningbySexAreaYear.json','utf8'));
 // Create a HTTP server app.
 var app = express();
 
