@@ -55,7 +55,7 @@ app.get('/population/placeName/:id', function(req, res) {
 });
 
 app.get('/earnings/', function(req, res){
-  db.all("SELECT * FROM earnings OUTER JOIN population", function(err, row) {
+  db.all("SELECT * FROM earnings", function(err, row) {
     var rowString = JSON.stringify(row, null, '\t');
     res.sendStatus(rowString);
   });
@@ -102,12 +102,25 @@ app.get('/FemaleEarning/:area', function(req,res){
   });
 });
 
+app.get('/TopEarners/:sex', function (req, res){
+  db.all("SELECT Sex, AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-08' "
+        +"FROM earnings WHERE StatisticalIndicator ='Total' AND  Sex = " + req.params.sex
+        +" ORDER BY ((Y2007+ Y2008+ Y2009)/3) DESC"
+        , function(err, row){
+    var rowString = JSON.stringify(row, null, '\t');
+    res.sendStatus(rowString);
+  });
+});
+
+
+
 
 //  + " INNER JOIN population ON earnings.area = population.placeName "
 //AreaOfResidence = "+ req.params.area + ""
 //AreaOfResidence, StatisticalIndicator, Y2007, Y2008, Y2009
-
-//Questions And Queries to answer
+//WHERE
+//Questions And Queries to answer////
+//===================================
 //where there has been a raise in pop,
 //where there has been a raise in wage,
 //are both areas the same?
