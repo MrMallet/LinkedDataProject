@@ -9,7 +9,7 @@ var db = new sqlite3.Database(':memory:');
 // Create a HTTP server app.
 var app = express();
 // Read in the JSON files.
-var populationData = JSON.parse(fs.readFileSync('ChangeInAreaPopulation.json','utf8'));
+var populationData = JSON.parse(fs.readFileSync('ChangeInAreaPopulation2.json','utf8'));
 var earningData = JSON.parse(fs.readFileSync('AnnualEarningbySexAreaYear.json','utf8'));
 
 app.use(bodyParser.json());
@@ -34,7 +34,8 @@ db.serialize(function(){
 
 });
 
-
+/////////////////////////////////////////////////////////
+// gets//////gets////////////gets/////////tegetetg/drgrg/
 app.get('/', function(req, res) {
   res.send("This is James' API.");
 });
@@ -48,8 +49,6 @@ app.get('/population/', function(req, res){
 app.get('/population/placeName/:id', function(req, res) {
     db.all("SELECT * from population WHERE placeName = " + req.params.id , function(err, row){
       var rowString = JSON.stringify(row, null, '\t');
-      var result =  ("\t Area: " + row.area + " \t Sex: " + row.sex + " \t PlaceName: "+ row.placeName + "\t StatIndicatorAndCensus: " + row.statIndicatorAndCensus);
-      //console.log(result);
       res.sendStatus(rowString);
     });
 });
@@ -112,7 +111,7 @@ app.get('/TopEarners/:sex', function (req, res){
   });
 });
 
-
+ 
 
 
 //  + " INNER JOIN population ON earnings.area = population.placeName "
