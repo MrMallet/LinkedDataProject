@@ -49,6 +49,30 @@
   },
   {
     "Sex":"Both",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Basic",
+    "Y2007":37781,
+    "Y2008":41056,
+    "Y2009":38988
+  },
+  {
+    "Sex":"Both",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Bonus",
+    "Y2007":2667,
+    "Y2008":3077,
+    "Y2009":2154
+  },
+  {
+    "Sex":"Both",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Total",
+    "Y2007":40448,
+    "Y2008":44134,
+    "Y2009":41142
+  },
+  {
+    "Sex":"Both",
     "AreaOfResidence":"Munster",
     "StatisticalIndicator":"Basic",
     "Y2007":33773,
@@ -193,6 +217,30 @@
   },
   {
     "Sex":"Male",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Basic",
+    "Y2007":42793,
+    "Y2008":47899,
+    "Y2009":45415
+  },
+  {
+    "Sex":"Male",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Bonus",
+    "Y2007":3562,
+    "Y2008":4300,
+    "Y2009":3012
+  },
+  {
+    "Sex":"Male",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Total",
+    "Y2007":46355,
+    "Y2008":52199,
+    "Y2009":48427
+  },
+  {
+    "Sex":"Male",
     "AreaOfResidence":"Munster",
     "StatisticalIndicator":"Basic",
     "Y2007":38311,
@@ -334,6 +382,30 @@
     "Y2007":31367,
     "Y2008":32951,
     "Y2009":32437
+  },
+  {
+    "Sex":"Female",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Basic",
+    "Y2007":31829,
+    "Y2008":34066,
+    "Y2009":32767
+  },
+  {
+    "Sex":"Female",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Bonus",
+    "Y2007":1883,
+    "Y2008":1838,
+    "Y2009":1325
+  },
+  {
+    "Sex":"Female",
+    "AreaOfResidence":"Leinster",
+    "StatisticalIndicator":"Total",
+    "Y2007":33712,
+    "Y2008":35904,
+    "Y2009":34092
   },
   {
     "Sex":"Female",

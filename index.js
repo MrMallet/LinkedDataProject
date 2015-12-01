@@ -9,7 +9,7 @@ var db = new sqlite3.Database(':memory:');
 // Create a HTTP server app.
 var app = express();
 // Read in the JSON files.
-var populationData = JSON.parse(fs.readFileSync('ChangeInAreaPopulation2.json','utf8'));
+var populationData = JSON.parse(fs.readFileSync('ChangeInAreaPopulation3.json','utf8'));
 var earningData = JSON.parse(fs.readFileSync('AnnualEarningbySexAreaYear.json','utf8'));
 
 app.use(bodyParser.json());
@@ -40,12 +40,15 @@ app.get('/', function(req, res) {
   res.send("This is James' API.");
 });
 
+//////reurns population*
 app.get('/population/', function(req, res){
   db.all("SELECT * FROM population", function(err, row) {
     var rowString = JSON.stringify(row, null, '\t');
     res.sendStatus(rowString);
   });
 });
+
+//////returns population*: placeName
 app.get('/population/placeName/:id', function(req, res) {
     db.all("SELECT * from population WHERE placeName = " + req.params.id , function(err, row){
       var rowString = JSON.stringify(row, null, '\t');
@@ -53,6 +56,7 @@ app.get('/population/placeName/:id', function(req, res) {
     });
 });
 
+//////returns earnings*
 app.get('/earnings/', function(req, res){
   db.all("SELECT * FROM earnings", function(err, row) {
     var rowString = JSON.stringify(row, null, '\t');
@@ -60,6 +64,7 @@ app.get('/earnings/', function(req, res){
   });
 });
 
+////////returns earnings* : AreaOfResidence
 app.get('/earnings/AreaOfResidence/:area', function(req, res) {
     db.all("SELECT * from earnings WHERE AreaOfResidence = " + req.params.area , function(err, row){
       var rowString = JSON.stringify(row, null, '\t');
@@ -75,34 +80,38 @@ app.get('/earning/:sex/:area', function(req,res){
     res.sendStatus(rowString);
   });
 });
-//add in a reference to population for same area given.
+//////returns earnings(area,stat,and averge): sex and area
 app.get('/SexEarning/:sex/:area', function(req,res){
-  db.all("SELECT AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-08' FROM earnings WHERE Sex = "+ req.params.sex +" AND AreaOfResidence = " + req.params.area , function(err, row){
+  db.all("SELECT AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-09' FROM earnings WHERE Sex = "
+    + req.params.sex +" AND AreaOfResidence = "
+    + req.params.area , function(err, row){
     var rowString = JSON.stringify(row, null, '\t');
     res.sendStatus(rowString);
   });
 });
 
-//compare the sexes wages
+/////returns earnings(sex, area, stats) : sex, area
 app.get('/FemaleEarning/:area', function(req,res){
-  db.all("SELECT Sex, AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-08' "
-        +"FROM earnings WHERE Sex = 'Female' AND AreaOfResidence = " + req.params.area , function(err, row){
+  db.all("SELECT Sex, AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-09' "
+        +"FROM earnings WHERE Sex = 'Female' AND AreaOfResidence = " + req.params.area
+        , function(err, row){
     var rowString = JSON.stringify(row, null, '\t');
     res.sendStatus(rowString);
   });
 });
 
-//get female wages and population using AreaOfresidence/placeName
-app.get('/FemaleEarning/:area', function(req,res){
-  db.all("SELECT Sex, AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-08' "
-        +"FROM earnings WHERE Sex = 'Female' AND AreaOfResidence = " + req.params.area , function(err, row){
+/////returns earnings(sex, area, stats) : sex, area
+app.get('/MaleEarning/:area', function(req,res){
+  db.all("SELECT Sex, AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-09' "
+        +"FROM earnings WHERE Sex = 'Male' AND AreaOfResidence = " + req.params.area , function(err, row){
     var rowString = JSON.stringify(row, null, '\t');
     res.sendStatus(rowString);
   });
 });
 
+/////returns earnings(sex, area, stat, average): Stat, sex
 app.get('/TopEarners/:sex', function (req, res){
-  db.all("SELECT Sex, AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-08' "
+  db.all("SELECT Sex, AreaOfResidence, StatisticalIndicator, ((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-09' "
         +"FROM earnings WHERE StatisticalIndicator ='Total' AND  Sex = " + req.params.sex
         +" ORDER BY ((Y2007+ Y2008+ Y2009)/3) DESC"
         , function(err, row){
@@ -111,8 +120,47 @@ app.get('/TopEarners/:sex', function (req, res){
   });
 });
 
- 
+//returns population & earnings(pop.area, earnings.area, sex, ):
+app.get('/PopEarning/:sex/:province', function(req,res){
+  db.all("SELECT population.area AS Area, earnings.AreaOfResidence AS Province,"
+        +" earnings.Sex AS Sex, ((earnings.Y2007+ earnings.Y2008+ earnings.Y2009)/3) AS 'AvergeWage07-09', "
+        +" population.Y2006 AS PopulationGrowth2006, population.Y2011 AS PopulationGrowth2011 "
+        +" FROM earnings INNER JOIN population WHERE "
+        +" population.placeName = "+ req.params.province +" AND earnings.AreaOfResidence ="+ req.params.province +" AND population.area = 'State'"
+        +" AND earnings.StatisticalIndicator ='Total' AND population.statIndicatorAndCensus = 'Actual Change Since Previous Census (Number)' "
+        +" AND earnings.Sex = "+req.params.sex +" AND population.sex = "+ req.params.sex
+        , function(err, row){
+        var rowString = JSON.stringify(row, null, '\t');
+        res.sendStatus(rowString);
+        });
+  });
 
+/*
+  /////returns earnings(sex, area, stat, average): Stat, sex
+  app.get('/TopEarnersPopulationGrowth/:sex', function (req, res){
+    db.all("SELECT earnings.Sex, earnings.AreaOfResidence, earnings.StatisticalIndicator, ((earnings.Y2007+ earnings.Y2008+ earnings.Y2009)/3) AS 'AvergeWage07-09', "
+          +" "
+          +"FROM earnings WHERE StatisticalIndicator ='Total' AND  Sex = " + req.params.sex
+          +" ORDER BY ((Y2007+ Y2008+ Y2009)/3) DESC"
+          , function(err, row){
+      var rowString = JSON.stringify(row, null, '\t');
+      res.sendStatus(rowString);
+    });
+  });
+
+
+//////need to return an inner join from both Datasets
+app.get('/pop&earning/:area', function(req,res){
+  db.all("SELECT earnings.Sex AS Sex, earnings.AreaOfResidence AS Area, earnings.StatisticalIndicator AS EARNStat, earnings.((Y2007+ Y2008+ Y2009)/3) AS 'Averge07-09', "
+        +" population.statIndicatorAndCensus AS POPStat, population.Y2006 AS Y2006, population.Y2011 AS Y2011 "
+        +" FROM earnings INNER JOIN population WHERE earnings.StatisticalIndicator ='Total' AND population.statIndicatorAndCensus = 'Population Change Since Previous Census (%)'"
+        +" AND earnings.AreaOfResidence LIKE \"%"+ req.params.area+ "%\" AND population.area LIKE \"%" + req.params.area +"%\" "
+        , function(err, row){
+    var rowString = JSON.stringify(row, null, '\t');
+    res.sendStatus(rowString);
+  });
+});
+*/
 
 //  + " INNER JOIN population ON earnings.area = population.placeName "
 //AreaOfResidence = "+ req.params.area + ""
