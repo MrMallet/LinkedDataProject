@@ -29,3 +29,48 @@ fs.writeFile(outputFile, JSON.stringify(result, 0),function(err) {
     }
   }
 );
+reurns population*
+http://127.0.0.1:8000/population/
+
+returns population*: placeName
+http://127.0.0.1:8000/population/placeName/:id
+
+
+//returns popuilation*: id
+http://127.0.0.1:8000/population/id/:id
+
+
+returns earnings*
+http://127.0.0.1:8000/earnings/
+
+
+returns earnings* : AreaOfResidence
+http://127.0.0.1:8000/earnings/AreaOfResidence/:area'
+
+
+returns earnings(area,stat,and averge): sex and area
+http://127.0.0.1:8000/earnings/:sex/:area
+
+
+returns earnings(sex, area, stats) : sex, area
+http://127.0.0.1:8000/FemaleEarning/:area
+
+
+
+returns earnings(sex, area, stats) : sex, area
+http://127.0.0.1:8000/MaleEarning/:area
+
+
+returns earnings(sex, area, stat, average): Stat, sex
+http://127.0.0.1:8000/TopEarners/:sex
+
+
+
+returns population & earnings(pop.area, earnings.area, sex, ):
+http://127.0.0.1:8000/PopEarning/:sex/:province
+
+delete population
+http://127.0.0.1:8000//deletePop/:id
+
+delete earnings
+http://127.0.0.1:8000/deleteEarning/:id

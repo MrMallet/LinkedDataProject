@@ -82,7 +82,7 @@ app.get('/earnings/AreaOfResidence/:area', function(req, res) {
 });
 
 //returns earnings: sex and area
-app.get('/earning/:sex/:area', function(req,res){
+app.get('/earnings/:sex/:area', function(req,res){
   //var sex ="Both";
   db.all("SELECT * FROM earnings WHERE Sex =" + req.params.sex + "AND AreaOfResidence = " + req.params.area , function(err, row){
     var rowString = JSON.stringify(row, null, '\t');
@@ -164,7 +164,7 @@ app.get('/deleteEarning/:id', function(req,res){
 ///////put////too much information to get froma user ///////////
 
 app.put('/updatePop/:id/:parameter/:value', function (req, res){
-  db.all("UPDATE population SET "+ req.params.parmeter +" = " + req.params.value + " WHERE id = "+ req.params.id,
+  db.all("UPDATE population SET "+ req.params.parameter +" = " + req.params.value + " WHERE id = " + req.params.id ,
   function(err, row){
     res.send("The population data id number "+req.params.id+ "has been updated");
   })
