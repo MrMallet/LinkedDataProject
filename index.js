@@ -56,6 +56,15 @@ app.get('/population/placeName/:id', function(req, res) {
     });
 });
 
+//////returns popuilation*: id
+app.get('/population/id/:id', function(req, res) {
+    db.all("SELECT * from population WHERE id = " + req.params.id , function(err, row){
+      var rowString = JSON.stringify(row, null, '\t');
+      res.sendStatus(rowString);
+    });
+});
+
+
 //////returns earnings*
 app.get('/earnings/', function(req, res){
   db.all("SELECT * FROM earnings", function(err, row) {
@@ -134,6 +143,33 @@ app.get('/PopEarning/:sex/:province', function(req,res){
         res.sendStatus(rowString);
         });
   });
+
+///////////////////////////////////////////////////////////////////
+///////delete drom both tables/////////////////////////////////////
+app.get('/deletePop/:id', function(req,res){
+  db.all("DELETE FROM population WHERE id =" + req.params.id + " " , function(err,row){
+    res.send("The population data " + req.params.id + " has been deleted");
+  });
+
+});
+
+app.get('/deleteEarning/:id', function(req,res){
+  db.all("DELETE FROM earnings WHERE id =" + req.params.id + " " , function(err,row){
+    res.send("The earnings data " + req.params.id + " has been deleted");
+  });
+
+});
+
+/////////////////////////////////////////////////////////////////
+///////put////too much information to get froma user ///////////
+
+app.put('/updatePop/:id/:parameter/:value', function (req, res){
+  db.all("UPDATE population SET "+ req.params.parmeter +" = " + req.params.value + " WHERE id = "+ req.params.id,
+  function(err, row){
+    res.send("The population data id number "+req.params.id+ "has been updated");
+  })
+});
+
 
 /*
   /////returns earnings(sex, area, stat, average): Stat, sex
